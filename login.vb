@@ -6,7 +6,7 @@ Public Class LoginForm
         Dim password As String = txtPassword.Text
 
         ' Connection string to your SQL Server database
-        Dim connectionString As String = "Server=localhost;Database=wmg-po;User Id=sa;Password=admin@WMG2024;"
+        Dim connectionString As String = "Server=180.1.1.6;Database=wmg-po;User Id=sa;Password=admin@WMG2024;"
 
         ' SQL query to check for the user and retrieve acc_level and department
         Dim query As String = "SELECT acc_level, department FROM dep_users WHERE username=@username AND password=@password"

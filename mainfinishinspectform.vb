@@ -15,7 +15,7 @@ Imports System.IO
 Imports System.Text
 Imports System.Threading.Tasks
 Public Class mainfinishinspectform
-    Private sqlServerConnectionString As String = "Server=localhost;Database=wmg-po;User Id=sa;Password=admin@WMG2024;"
+    Private sqlServerConnectionString As String = "Server=180.1.1.6;Database=wmg-po;User Id=sa;Password=admin@WMG2024;"
     Private stopwatch As Stopwatch
     Private btnMoveSelected As Button ' Add button for moving selected items
 
