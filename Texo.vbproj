@@ -1,0 +1,1253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9A258B9-561C-4269-B88C-B6ADB04EA3D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Departments.LoginForm</StartupObject>
+    <RootNamespace>Departments</RootNamespace>
+    <AssemblyName>Departments</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Departments.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Departments.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CandyBar.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.1.2.0\lib\net472\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.3.25, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.DP.0.95.3.25\lib\net461\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DinkToPdf, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DinkToPdf.1.0.8\lib\netstandard1.6\DinkToPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV, Version=4.10.0.5680, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.4.10.0.5680\lib\netstandard2.0\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=7.6.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.6.0\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.8.0.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.8.0.0\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.Core.1.5.0.6\lib\net45\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.PdfSharp, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net45\HtmlRenderer.PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.4.2.13, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.6.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.6.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\netstandard2.0\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.2.0\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Quality, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.Quality.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Snippets, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.Snippets.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.System, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.System.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.WPFonts, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.WPFonts.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Selenium.WebDriverBackedSelenium, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriverBackedSelenium.4.1.0\lib\net48\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.9.0.1\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.TypeExtensions.4.3.0\lib\net462\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.8.0.0\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Thread.4.0.0\lib\net46\System.Threading.Thread.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.31.0\lib\netstandard2.0\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.27.0\lib\netstandard2.0\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriverManager, Version=2.17.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebDriverManager.2.17.5\lib\net472\WebDriverManager.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.10\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.EmguCV, Version=0.16.5.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.Bindings.EmguCV.0.16.5\lib\netstandard2.0\ZXing.EmguCV.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.10\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accaddclientform.Designer.vb">
+      <DependentUpon>accaddclientform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="accaddclientform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addchimicitemform.Designer.vb">
+      <DependentUpon>addchimicitemform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addchimicitemform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addhulkfinishForm.Designer.vb">
+      <DependentUpon>addhulkfinishForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addhulkfinishForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addnewcodeform.Designer.vb">
+      <DependentUpon>addnewcodeform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addnewcodeform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brefsampleinfoform.Designer.vb">
+      <DependentUpon>brefsampleinfoform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="brefsampleinfoform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="colorsreportform.Designer.vb">
+      <DependentUpon>colorsreportform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="colorsreportform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contractform.Designer.vb">
+      <DependentUpon>contractform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="contractform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contractlotform.Designer.vb">
+      <DependentUpon>contractlotform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="contractlotform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractViewForm.Designer.vb">
+      <DependentUpon>ContractViewForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractViewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createbatchform.Designer.vb">
+      <DependentUpon>createbatchform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="createbatchform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerproblemsform.Designer.vb">
+      <DependentUpon>customerproblemsform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customerproblemsform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerproblemsreportform.Designer.vb">
+      <DependentUpon>customerproblemsreportform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customerproblemsreportform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dentryform.Designer.vb">
+      <DependentUpon>dentryform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dentryform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devcodelibform.Designer.vb">
+      <DependentUpon>devcodelibform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="devcodelibform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fabricinoutform.Designer.vb">
+      <DependentUpon>fabricinoutform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fabricinoutform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fetchfinishform.Designer.vb">
+      <DependentUpon>fetchfinishform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fetchfinishform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fetchfinishlinksform.Designer.vb">
+      <DependentUpon>fetchfinishlinksform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fetchfinishlinksform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fetchrowform.Designer.vb">
+      <DependentUpon>fetchrowform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fetchrowform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fetchrowinspectsampleform.Designer.vb">
+      <DependentUpon>fetchrowinspectsampleform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fetchrowinspectsampleform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finishdisbursementtform.Designer.vb">
+      <DependentUpon>finishdisbursementtform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="finishdisbursementtform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finishdisbursmentviewform.Designer.vb">
+      <DependentUpon>finishdisbursmentviewform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="finishdisbursmentviewform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="finishinspectadddefectsform.Designer.vb">
+      <DependentUpon>finishinspectadddefectsform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="finishinspectadddefectsform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddWorkOrder.Designer.vb">
+      <DependentUpon>frmAddWorkOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddWorkOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMachineIdleTimes.Designer.vb">
+      <DependentUpon>frmMachineIdleTimes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMachineIdleTimes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVariables.vb" />
+    <Compile Include="insertcolorsform.Designer.vb">
+      <DependentUpon>insertcolorsform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insertcolorsform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liveproductionform.Designer.vb">
+      <DependentUpon>liveproductionform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="liveproductionform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainfinishinspectform.Designer.vb">
+      <DependentUpon>mainfinishinspectform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainfinishinspectform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainITForm.Designer.vb">
+      <DependentUpon>MainITForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainITForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainqcrawtestform.Designer.vb">
+      <DependentUpon>mainqcrawtestform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainqcrawtestform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainrawstoreform.Designer.vb">
+      <DependentUpon>mainrawstoreform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainrawstoreform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainrowinspectform.Designer.vb">
+      <DependentUpon>mainrowinspectform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainrowinspectform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainrowsampleform.Designer.vb">
+      <DependentUpon>mainrowsampleform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainrowsampleform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meterrowinspectForm.Designer.vb">
+      <DependentUpon>meterrowinspectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="meterrowinspectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="moveinspectiondataform.Designer.vb">
+      <DependentUpon>moveinspectiondataform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="moveinspectiondataform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="networkcamerasearchform.Designer.vb">
+      <DependentUpon>NetworkCameraSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkCameraSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packingform.Designer.vb">
+      <DependentUpon>Packingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Packingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="packingviewform.Designer.vb">
+      <DependentUpon>packingviewform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="packingviewform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pickpackform.Designer.vb">
+      <DependentUpon>pickpackform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pickpackform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="planningForm.Designer.vb">
+      <DependentUpon>planningForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="planningForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="porowtoinspectionForm.Designer.vb">
+      <DependentUpon>porowtoinspectionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="porowtoinspectionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="powerpiform.Designer.vb">
+      <DependentUpon>powerpiform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="powerpiform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="powerpihulkform.Designer.vb">
+      <DependentUpon>powerpihulkform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="powerpihulkform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printbarcoderawform.Designer.vb">
+      <DependentUpon>printbarcoderawform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="printbarcoderawform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printworkorderform.Designer.vb">
+      <DependentUpon>printworkorderform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="printworkorderform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Qcfinishrollform.Designer.vb">
+      <DependentUpon>Qcfinishrollform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Qcfinishrollform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qcrawtestform.Designer.vb">
+      <DependentUpon>qcrawtestform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="qcrawtestform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qcrawtestreportform.Designer.vb">
+      <DependentUpon>qcrawtestreportform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="qcrawtestreportform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="qcreplyform.Designer.vb">
+      <DependentUpon>qcreplyform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="qcreplyform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawdisbursementform.Designer.vb">
+      <DependentUpon>rawdisbursementform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawdisbursementform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawfrominspectreturnform.Designer.vb">
+      <DependentUpon>rawfrominspectreturnform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawfrominspectreturnform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawinspectadddefectsform.Designer.vb">
+      <DependentUpon>rawinspectadddefectsform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawinspectadddefectsform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawreturnform.Designer.vb">
+      <DependentUpon>rawreturnform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawreturnform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawstorerawform.Designer.vb">
+      <DependentUpon>rawstorerawform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawstorerawform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawstorereporform.Designer.vb">
+      <DependentUpon>rawstorereporform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawstorereporform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rawtoinspectform.Designer.vb">
+      <DependentUpon>rawtoinspectform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rawtoinspectform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recievedchimicform.Designer.vb">
+      <DependentUpon>recievedchimicform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recievedchimicform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recievedrawform.Designer.vb">
+      <DependentUpon>recievedrawform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recievedrawform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportchangesform.Designer.vb">
+      <DependentUpon>reportchangesform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportchangesform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportfinishinspectform.Designer.vb">
+      <DependentUpon>reportfinishinspectform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportfinishinspectform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportform.Designer.vb">
+      <DependentUpon>reportform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportlivebatchform.Designer.vb">
+      <DependentUpon>reportlivebatchform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportlivebatchform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportrowinspect2form.Designer.vb">
+      <DependentUpon>reportrowinspect2form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportrowinspect2form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportrowinspectform.Designer.vb">
+      <DependentUpon>reportrowinspectform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportrowinspectform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportsfinishinspectform.Designer.vb">
+      <DependentUpon>reportsfinishinspectform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportsfinishinspectform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportstop.Designer.vb">
+      <DependentUpon>reportstop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportstop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporttechnicalform.Designer.vb">
+      <DependentUpon>reporttechnicalform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reporttechnicalform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporttrackform.Designer.vb">
+      <DependentUpon>reporttrackform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reporttrackform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="requestbatchrawfromstoreform.Designer.vb">
+      <DependentUpon>requestbatchrawfromstoreform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="requestbatchrawfromstoreform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryNotificationForm.Designer.vb">
+      <DependentUpon>salarynotificationform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salarynotificationform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salesprintpackingform.Designer.vb">
+      <DependentUpon>salesprintpackingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salesprintpackingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="samplelotrawreport2form.Designer.vb">
+      <DependentUpon>samplelotrawreport2form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="samplelotrawreport2form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="samplelotrawreportform.Designer.vb">
+      <DependentUpon>samplelotrawreportform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="samplelotrawreportform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchrowfinishform.Designer.vb">
+      <DependentUpon>searchrowfinishform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchrowfinishform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stockfinishform.Designer.vb">
+      <DependentUpon>stockfinishform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stockfinishform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storefinishform.Designer.vb">
+      <DependentUpon>storefinishform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storefinishform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storefinishreturn.Designer.vb">
+      <DependentUpon>storefinishreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storefinishreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storefinishviewform.Designer.vb">
+      <DependentUpon>storefinishviewform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="storefinishviewform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="techdataform.Designer.vb">
+      <DependentUpon>techdataform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="techdataform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="technicalForm.Designer.vb">
+      <DependentUpon>technicalForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="technicalForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="technicallibqconpoForm.Designer.vb">
+      <DependentUpon>technicallibqconpoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="technicallibqconpoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="techviewform.Designer.vb">
+      <DependentUpon>techviewform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="techviewform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testrepfollowproddataentryform.Designer.vb">
+      <DependentUpon>testrepfollowproddataentryform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testrepfollowproddataentryform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trackingform.Designer.vb">
+      <DependentUpon>trackingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="trackingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatecodeonpoform.Designer.vb">
+      <DependentUpon>updatecodeonpoform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatecodeonpoform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatedeliverydateform.Designer.vb">
+      <DependentUpon>updatedeliverydateform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatedeliverydateform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatelibrarycodeform.Designer.vb">
+      <DependentUpon>updatelibrarycodeform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatelibrarycodeform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateqtyworderform.Designer.vb">
+      <DependentUpon>updateqtyworderform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updateqtyworderform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updaterollocationform.Designer.vb">
+      <DependentUpon>updaterollocationform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updaterollocationform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatetonewbatchlotform.Designer.vb">
+      <DependentUpon>updatetonewbatchlotform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="updatetonewbatchlotform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uploadform.Designer.vb">
+      <DependentUpon>uploadform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uploadform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AIAnalysisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AIAnalysisForm.Designer.vb">
+      <DependentUpon>AIAnalysisForm.vb</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="accaddclientform.resx">
+      <DependentUpon>accaddclientform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addchimicitemform.resx">
+      <DependentUpon>addchimicitemform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addhulkfinishForm.resx">
+      <DependentUpon>addhulkfinishForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addnewcodeform.resx">
+      <DependentUpon>addnewcodeform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="brefsampleinfoform.resx">
+      <DependentUpon>brefsampleinfoform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="colorsreportform.resx">
+      <DependentUpon>colorsreportform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contractform.resx">
+      <DependentUpon>contractform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="contractlotform.resx">
+      <DependentUpon>contractlotform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractViewForm.resx">
+      <DependentUpon>ContractViewForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createbatchform.resx">
+      <DependentUpon>createbatchform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerproblemsform.resx">
+      <DependentUpon>customerproblemsform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerProblemsReportForm.resx">
+      <DependentUpon>customerproblemsreportform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dentryform.resx">
+      <DependentUpon>dentryform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="devcodelibform.resx">
+      <DependentUpon>devcodelibform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fabricinoutform.resx">
+      <DependentUpon>fabricinoutform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fetchfinishform.resx">
+      <DependentUpon>fetchfinishform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fetchfinishlinksform.resx">
+      <DependentUpon>fetchfinishlinksform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fetchrowform.resx">
+      <DependentUpon>fetchrowform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fetchrowinspectsampleform.resx">
+      <DependentUpon>fetchrowinspectsampleform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finishdisbursementtform.resx">
+      <DependentUpon>finishdisbursementtform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finishdisbursmentviewform.resx">
+      <DependentUpon>finishdisbursmentviewform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="finishinspectadddefectsform.resx">
+      <DependentUpon>finishinspectadddefectsform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddWorkOrder.resx">
+      <DependentUpon>frmAddWorkOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMachineIdleTimes.resx">
+      <DependentUpon>frmMachineIdleTimes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertcolorsform.resx">
+      <DependentUpon>insertcolorsform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liveproductionform.resx">
+      <DependentUpon>liveproductionform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainfinishinspectform.resx">
+      <DependentUpon>mainfinishinspectform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainITForm.resx">
+      <DependentUpon>MainITForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainqcrawtestform.resx">
+      <DependentUpon>mainqcrawtestform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainrawstoreform.resx">
+      <DependentUpon>mainrawstoreform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainrowinspectform.resx">
+      <DependentUpon>mainrowinspectform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainrowsampleform.resx">
+      <DependentUpon>mainrowsampleform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meterrowinspectForm.resx">
+      <DependentUpon>meterrowinspectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="moveinspectiondataform.resx">
+      <DependentUpon>moveinspectiondataform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetworkCameraSearchForm.resx">
+      <DependentUpon>NetworkCameraSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packingform.resx">
+      <DependentUpon>Packingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="packingviewform.resx">
+      <DependentUpon>packingviewform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pickpackform.resx">
+      <DependentUpon>pickpackform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="planningForm.resx">
+      <DependentUpon>planningForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="porowtoinspectionForm.resx">
+      <DependentUpon>porowtoinspectionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="powerpiform.resx">
+      <DependentUpon>powerpiform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="powerpihulkform.resx">
+      <DependentUpon>powerpihulkform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printbarcoderawform.resx">
+      <DependentUpon>printbarcoderawform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printworkorderform.resx">
+      <DependentUpon>printworkorderform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Qcfinishrollform.resx">
+      <DependentUpon>Qcfinishrollform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qcrawtestform.resx">
+      <DependentUpon>qcrawtestform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="qcrawtestreportform.resx">
+      <DependentUpon>qcrawtestreportform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QCReplyForm.resx">
+      <DependentUpon>qcreplyform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawdisbursementform.resx">
+      <DependentUpon>rawdisbursementform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawfrominspectreturnform.resx">
+      <DependentUpon>rawfrominspectreturnform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawinspectadddefectsform.resx">
+      <DependentUpon>rawinspectadddefectsform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawreturnform.resx">
+      <DependentUpon>rawreturnform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawstorerawform.resx">
+      <DependentUpon>rawstorerawform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawstorereporform.resx">
+      <DependentUpon>rawstorereporform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rawtoinspectform.resx">
+      <DependentUpon>rawtoinspectform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recievedchimicform.resx">
+      <DependentUpon>recievedchimicform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recievedrawform.resx">
+      <DependentUpon>recievedrawform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportchangesform.resx">
+      <DependentUpon>reportchangesform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportfinishinspectform.resx">
+      <DependentUpon>reportfinishinspectform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportform.resx">
+      <DependentUpon>reportform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportlivebatchform.resx">
+      <DependentUpon>reportlivebatchform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportrowinspect2form.resx">
+      <DependentUpon>reportrowinspect2form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportrowinspectform.resx">
+      <DependentUpon>reportrowinspectform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportsfinishinspectform.resx">
+      <DependentUpon>reportsfinishinspectform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportstop.resx">
+      <DependentUpon>reportstop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporttechnicalform.resx">
+      <DependentUpon>reporttechnicalform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporttrackform.resx">
+      <DependentUpon>reporttrackform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="requestbatchrawfromstoreform.resx">
+      <DependentUpon>requestbatchrawfromstoreform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryNotificationForm.resx">
+      <DependentUpon>salarynotificationform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salesprintpackingform.resx">
+      <DependentUpon>salesprintpackingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="samplelotrawreport2form.resx">
+      <DependentUpon>samplelotrawreport2form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="samplelotrawreportform.resx">
+      <DependentUpon>samplelotrawreportform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchrowfinishform.resx">
+      <DependentUpon>searchrowfinishform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stockfinishform.resx">
+      <DependentUpon>stockfinishform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storefinishform.resx">
+      <DependentUpon>storefinishform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storefinishreturn.resx">
+      <DependentUpon>storefinishreturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storefinishviewform.resx">
+      <DependentUpon>storefinishviewform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="techdataform.resx">
+      <DependentUpon>techdataform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="technicalForm.resx">
+      <DependentUpon>technicalForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="technicallibqconpoForm.resx">
+      <DependentUpon>technicallibqconpoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="techviewform.resx">
+      <DependentUpon>techviewform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testrepfollowproddataentryform.resx">
+      <DependentUpon>testrepfollowproddataentryform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trackingform.resx">
+      <DependentUpon>trackingform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatecodeonpoform.resx">
+      <DependentUpon>updatecodeonpoform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatedeliverydateform.resx">
+      <DependentUpon>updatedeliverydateform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatelibrarycodeform.resx">
+      <DependentUpon>updatelibrarycodeform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateqtyworderform.resx">
+      <DependentUpon>updateqtyworderform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updaterollocationform.resx">
+      <DependentUpon>updaterollocationform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatetonewbatchlotform.resx">
+      <DependentUpon>updatetonewbatchlotform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploadform.resx">
+      <DependentUpon>uploadform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AIAnalysisForm.resx">
+      <DependentUpon>AIAnalysisForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CandyBar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.135.0.7049.8400\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.135.0.7049.8400\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.31.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.31.0\build\Selenium.WebDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.135.0.7049.8400\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.135.0.7049.8400\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.4.31.0\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.31.0\build\Selenium.WebDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
